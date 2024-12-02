@@ -1,0 +1,88 @@
+<!-- test_gestion_rh.html -->
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Unitaire - Gestion RH</title>
+  </head>
+  <body>
+    <h1>Résultats des Tests Unitaires</h1>
+    <pre id="results"></pre>
+
+    <script src="app.js"></script>
+    <script>
+      
+      // Fonction d'assertion
+      function assertEquals(actual, expected, testName) {
+        const results = document.getElementById("results");
+        if (actual === expected) {
+          results.textContent += `✅ ${testName} : Réussi\n`;
+        } else {
+          results.textContent += `❌ ${testName} : Échoué\n   Attendu : ${expected}\n   Obtenu : ${actual}\n`;
+        }
+      }
+
+      // Tests unitaires
+      function testAjouterEmploye() {
+        const employesInitial = employes.length;
+        ajouterEmploye(4, "Lemoine", "Manager");
+        assertEquals(
+          employes.length,
+          employesInitial + 1,
+          "Ajout d'un employé"
+        );
+      }
+
+      function testSupprimerEmploye() {
+        const employesInitial = employes.length;
+        supprimerEmploye(1);
+        assertEquals(
+          employes.length,
+          employesInitial - 1,
+          "Suppression d'un employé"
+        );
+      }
+
+      function testAjouterEmployeManuel() {
+        resetEmployes();
+        document.getElementById("ajout-nom").value = "Lemoine";
+        document.getElementById("ajout-poste").value = "Analyste";
+        ajouterEmployeManuel();
+        assertEquals(
+          employes.find((emp) => emp.id === 4),
+          { id: 4, nom: "Lemoine", poste: "Analyste" },
+          "Ajouter un employé manuel"
+        );
+      }
+
+   
+      function testSupprimerEmployeManuel() {
+        resetEmployes();
+        document.getElementById("supprimer-id").value = "2";
+        supprimerEmployeManuel(); 
+        assertEquals(
+          employes.find((emp) => emp.id === 2),
+          undefined,
+          "Supprimer un employé manuel"
+        );
+      }
+
+      function testModifierEmploye() {
+        console.log("Test de modification de l'employé");
+        modifierEmploye(2, "Durand", "Chef de projet");
+        assertEquals(
+          employes[1].poste,
+          "Chef de projet",
+          "Modification du poste de l'employé"
+        );
+      }
+  
+      testAjouterEmploye();
+      testSupprimerEmploye();
+      testModifierEmploye();
+      testAjouterEmployeManuel();
+      testSupprimerEmployeManuel();
+
+    </script>
+  </body>
+</html>

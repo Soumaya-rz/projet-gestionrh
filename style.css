@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #1d2d44; 
+}
+  
+  h1 {
+    background-color: #3e5c76; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 10px auto; 
+    max-width: 400px;
+    width: 100%; 
+    border-radius: 8px; 
+  }
+  
+
+h3 {
+    color: #3e5c76;
+    margin-top: 30px;
+    text-align: center;
+}
+
+button {
+    background-color: #3e5c76;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px auto; 
+    display: block;
+}
+
+button:hover {
+    background-color: #1d2d44; 
+}
+
+
+input[type="text"],
+input[type="number"] {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #3e5c76;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f8f9fa; 
+    color: #1d2d44;
+}
+
+
+#liste-employes {
+    background-color: #f8f9fa; 
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #3e5c76;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+body > h3,
+body > button,
+body > div,
+input {
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        font-size: 14px;
+    }
+}

@@ -1,25 +1,44 @@
 <!-- index.html -->
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Gestion RH</title>
-</head>
-<body>
-    <h1>Bienvenue dans le système de gestion RH</h1>
-    <button onclick="afficherEmployes()">Afficher la liste des employés</button>
-    <div id="liste-employes"></div>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
-    <!-- Section pour ajouter un employé -->
-    <h3>Ajouter un employé</h3>
-    <input type="text" id="ajout-nom" placeholder="Nom">
-    <input type="text" id="ajout-poste" placeholder="Poste">
-    <button onclick="ajouterEmployeManuel()">Ajouter</button>
+    <title>Document</title>
+  </head>
 
-    <!-- Section pour supprimer un employé -->
-    <h3>Supprimer un employé</h3>
-    <input type="number" id="supprimer-id" placeholder="ID">
-    <button onclick="supprimerEmployeManuel()">Supprimer</button>
+  <html>
+    <head>
+      <title>Gestion RH</title>
+    </head>
+    <body>
+      <h1>Bienvenue dans le système de gestion RH</h1>
+      <button onclick="afficherEmployes()">
+        Afficher la liste des employés
+      </button>
+      <div id="liste-employes"></div>
 
-    <script src="app.js"></script>
-</body>
+      <!-- Section pour ajouter un employé -->
+      <h3>Ajouter un employé</h3>
+      <input type="text" id="ajout-nom" placeholder="Nom" />
+      <input type="text" id="ajout-poste" placeholder="Poste" />
+      <button onclick="ajouterEmployeManuel()">Ajouter</button>
+
+      <!-- Section pour supprimer un employé -->
+      <h3>Supprimer un employé</h3>
+      <input type="number" id="supprimer-id" placeholder="ID" />
+      <button onclick="supprimerEmployeManuel()">Supprimer</button>
+
+      <!-- Section pour modifier un employé -->
+      <h3>Modifier un employé</h3>
+      <input type="number" id="modifier-id" placeholder="ID" />
+      <input type="text" id="modifier-nom" placeholder="Nouveau nom" />
+      <input type="text" id="modifier-poste" placeholder="Nouveau poste" />
+      <button onclick="modifierEmployeManuel()">Modifier</button>
+      
+      <script src="app.js"></script>
+    </body>
+  </html>
 </html>

@@ -1,0 +1,11 @@
+#ETAPES
+
+- Création du fichier style.css.
+- Création du fichier test_employes.html pour les test unitaires.
+- Création du fichier testSelenium puis exécution des test pour "ajouter", "supprimer" et vérifie les changements dans la liste des employés.
+
+#DIFFICULTÉS 
+
+> Fonction modifierEmployeManuel ne modifie rien.
+> Test unitaires au niveau des fonctions ajouterEmployeManuel et supprimerEmployeManuel (Ne s'affiche pas).
+
